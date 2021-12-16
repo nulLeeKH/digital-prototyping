@@ -27,8 +27,8 @@ data = [
 @app.get("/api/upload/status/{device_id}")
 async def get_status(device_id: int, a: float, v: float, b: int):
     print(device_id, a, v, b)
-    data[device_id]['vol'] = a
-    data[device_id]['acc'] = abs(v - 1)
+    data[device_id]['vol'] = v
+    data[device_id]['acc'] = abs(a - 1)
     if b:
         data[device_id]['btn'] = not data[device_id]['btn']
     return
