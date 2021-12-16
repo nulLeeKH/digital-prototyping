@@ -67,9 +67,9 @@
           }
           $('[id="js_acc"]').attr("data-original-title", String(data['acc']));
 
-          if (data['vol'] < 0.1) {
+          if (data['vol'] < 0.01) {
             $('[id="js_vol"]').attr("src", "assets/green.png");
-          } else if (data['vol'] < 0.15) {
+          } else if (data['vol'] < 0.03) {
             $('[id="js_vol"]').attr("src", "assets/yellow.png");
           } else {
             $('[id="js_vol"]').attr("src", "assets/red.png");
